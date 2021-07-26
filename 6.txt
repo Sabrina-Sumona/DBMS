@@ -1,0 +1,36 @@
+CREATE DATABASE supershop;
+CREATE TABLE shop_item(item_id INT(20),item_name VARCHAR(20),menu_date VARCHAR(20),exp_date VARCHAR(20),price FLOAT(20),menu_area VARCHAR(20));
+
+INSERT INTO shop_item(`item_id`,`item_name`,`menu_date`,`exp_date`,`price`,`menu_area`) VALUES(1,'coca','01.01.2019','01.01.2020',50,'dhaka');
+INSERT INTO shop_item(`item_id`,`item_name`,`menu_date`,`exp_date`,`price`,`menu_area`) VALUES(2,'soda','02.01.2019','02.01.2020',100,'dhaka');
+INSERT INTO shop_item(`item_id`,`item_name`,`menu_date`,`exp_date`,`price`,`menu_area`) VALUES(3,'juice','03.01.2019','03.01.2020',20,'rajshahi');
+INSERT INTO shop_item(`item_id`,`item_name`,`menu_date`,`exp_date`,`price`,`menu_area`) VALUES(4,'chips','04.01.2019','04.01.2020',10,'joypurhat');
+INSERT INTO shop_item(`item_id`,`item_name`,`menu_date`,`exp_date`,`price`,`menu_area`) VALUES(5,'cake','05.01.2019','05.01.2020',5.50,'bogra');
+INSERT INTO shop_item(`item_id`,`item_name`,`menu_date`,`exp_date`,`price`,`menu_area`) VALUES(6,'bread','06.01.2019','06.01.2020',30.25,'bogra');
+INSERT INTO shop_item(`item_id`,`item_name`,`menu_date`,`exp_date`,`price`,`menu_area`) VALUES(7,'jelly','07.01.2019','07.01.2020',25,'khulna');
+INSERT INTO shop_item(`item_id`,`item_name`,`menu_date`,`exp_date`,`price`,`menu_area`) VALUES(8,'bread','08.01.2019','08.01.2020',200,'khulna');
+INSERT INTO shop_item(`item_id`,`item_name`,`menu_date`,`exp_date`,`price`,`menu_area`) VALUES(9,'marsmello','09.01.2019','09.01.2020',300,'thailand');
+INSERT INTO shop_item(`item_id`,`item_name`,`menu_date`,`exp_date`,`price`,`menu_area`) VALUES(10,'jam','10.01.2019','10.01.2020',250,'dhaka');
+INSERT INTO shop_item(`item_id`,`item_name`,`menu_date`,`exp_date`,`price`,`menu_area`) VALUES(11,'bread','11.01.2019','11.01.2020',38,'bogra');
+INSERT INTO shop_item(`item_id`,`item_name`,`menu_date`,`exp_date`,`price`,`menu_area`) VALUES(12,'bread','12.01.2019','12.01.2020',300,'khulna');
+
+SELECT * FROM `shop_item` ORDER BY `price` LIMIT 2;
+SELECT * FROM `shop_item` WHERE `item_name`='bread';
+SELECT * FROM `shop_item` WHERE 250<=`price`<=500 AND `item_name` NOT IN('soda','chips','cake','juice');
+
+ALTER TABLE shop_item ADD rating FLOAT(20);
+
+UPDATE shop_item SET `rating`=5.0 WHERE `item_name`='coca';
+UPDATE shop_item SET `rating`=3.5 WHERE `item_id`=11;
+UPDATE shop_item SET `rating`=3.5 WHERE `item_id`=8;
+UPDATE shop_item SET `rating`=2.0 WHERE `item_id`=6;
+UPDATE shop_item SET `rating`=3.5 WHERE `item_name`='soda';
+UPDATE shop_item SET `rating`=3.5 WHERE `item_name`='juice';
+UPDATE shop_item SET `rating`=4.5 WHERE `item_name`='marsmello';
+UPDATE shop_item SET `rating`=4.9 WHERE `item_name`='cake';
+UPDATE shop_item SET `rating`=3.0 WHERE `item_name`='juice';
+UPDATE shop_item SET `rating`=3.5 WHERE `item_name`='chips';
+UPDATE shop_item SET `rating`=4.5 WHERE `item_name`='jelly';
+UPDATE shop_item SET `rating`=1.5 WHERE `item_name`='jam';
+
+SELECT `item_name`,`rating` FROM `shop_item`;

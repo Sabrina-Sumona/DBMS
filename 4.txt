@@ -1,0 +1,17 @@
+CREATE DATABASE student_info;
+CREATE TABLE student(id INT(20), name VARCHAR(20), cgpa FLOAT(20), major_subjects VARCHAR(20), phone_numbers INT(20));
+
+INSERT INTO student(`id`,`name`,`cgpa`,`major_subjects`,`phone_numbers`) VALUES(11,'sabrina',3.00,'cse',0199);
+INSERT INTO student(`id`,`name`,`cgpa`,`major_subjects`,`phone_numbers`) VALUES(13,'naorin',2.20,'eee',0191);
+INSERT INTO student(`id`,`name`,`cgpa`,`major_subjects`,`phone_numbers`) VALUES(14,'sumona',2.50,'bangla',0195);
+INSERT INTO student(`id`,`name`,`cgpa`,`major_subjects`,`phone_numbers`) VALUES(15,'minu',3.00,'english',0196);
+INSERT INTO student(`id`,`name`,`cgpa`,`major_subjects`,`phone_numbers`) VALUES(19,'tinu',4.00,'law',0176);
+INSERT INTO student(`id`,`name`,`cgpa`,`major_subjects`,`phone_numbers`) VALUES(18,'mona',3.98,'ice',0179);
+INSERT INTO student(`id`,`name`,`cgpa`,`major_subjects`,`phone_numbers`) VALUES(12,'sns',4.00,'cse',0190);
+INSERT INTO student(`id`,`name`,`cgpa`,`major_subjects`,`phone_numbers`) VALUES(21,'sn',1.98,'cse',0167);
+
+SELECT DISTINCT `major_subjects` FROM student;
+
+SELECT * FROM student WHERE major_subjects NOT IN('bangla','law','english') AND 2.20>=cgpa<=3.00;
+
+SELECT * FROM student WHERE cgpa<2.00;

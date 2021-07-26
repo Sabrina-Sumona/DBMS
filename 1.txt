@@ -1,0 +1,5 @@
+CRAETE DATABASE batch45;
+CREATE TABLE books_info(book_id INT(20), name VARCHAR(20), price FLOAT(20), writter VARCHAR(20), cat_no INT(20));
+INSERT INTO books_info(`book_id`,`name`,`price`,`writter`,`cat_no`) VALUES(1234, 'DBMS', 300, 'abc', 1);
+INSERT INTO books_info(`book_id`,`name`,`price`,`writter`,`cat_no`) VALUES(1235, 'OS', 250, 'efc', 1);
+INSERT INTO books_info(`book_id`,`name`,`price`,`writter`,`cat_no`) VALUES(1236, 'Statistics', 400, 'mno', 2);

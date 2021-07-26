@@ -1,0 +1,8 @@
+CREATE DATABASE university;
+CREATE TABLE students(id INT(20),name VARCHAR(20),department VARCHAR(10),batch INT(20),cgpa FLOAT(20));
+INSERT INTO students(`id`,`name`,`department`,`batch`,`cgpa`)VALUES(18,'N','CSE',43,3.00);
+INSERT INTO students(`id`,`name`,`department`,`batch`,`cgpa`)VALUES(27,'M','CSE',45,3.66);
+INSERT INTO students(`id`,`name`,`department`,`batch`,`cgpa`)VALUES(36,'S','CSE',47,4.00);
+INSERT INTO students(`id`,`name`,`department`,`batch`,`cgpa`)VALUES(45,'P','ICE',46,3.98);
+INSERT INTO students(`id`,`name`,`department`,`batch`,`cgpa`)VALUES(54,'T','EEE',44,2.69);
+SELECT * FROM students WHERE department=='cse' AND cgpa>3.00;

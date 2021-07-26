@@ -1,0 +1,18 @@
+CREATE DATABASE company;
+CREATE TABLE employee(id INT AUTO_INCREMENT, name VARCHAR(20), age INT(20), address VARCHAR(20), salary INT(20), PRIMARY KEY(id));
+
+INSERT INTO employee(`name`,`age`,`address`,`salary`) VALUES('Akshay',25,'Delhi',30000);
+
+SELECT `salary` FROM `employee` WHERE `age`<26 AND `salary`<=33000;
+
+ALTER TABLE employee ADD phone_no INT(20);
+
+UPDATE employee SET `phone_no`=19 WHERE `id`=1;
+
+SELECT `name` FROM `employee` WHERE `phone_no` IS NULL;
+
+SELECT `name` FROM `employee` WHERE `salary`=30000;
+
+SELECT MAX(`salary`) FROM employee;
+
+SELECT AVG(`age`) FROM `employee` WHERE `salary`<=30000;

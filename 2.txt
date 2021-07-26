@@ -1,0 +1,7 @@
+INSERT INTO books_info(`book_id`,`name`,`price`,`writter`,`cat_no`)VALUES(1236,'MATH',500,'dfg',2);
+INSERT INTO books_info(`book_id`,`name`,`price`,`writter`,`cat_no`)VALUES(1237,'ENG',333.75,'sdf',2);
+INSERT INTO books_info(`book_id`,`name`,`price`,`writter`,`cat_no`)VALUES(1238,'ENG2',333,'sdf',2);
+
+SELECT * FROM books_info;
+SELECT 'book_id' FROM books_info;
+SELECT DISTINCT `writter` FROM books_info;

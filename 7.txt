@@ -1,0 +1,29 @@
+ALTER TABLE student ADD year INT(20);
+
+UPDATE student SET `year`=2010 WHERE `id`=13;
+UPDATE student SET `year`=1999 WHERE `id`=14;
+UPDATE student SET `year`=2000 WHERE `id`=15;
+UPDATE student SET `year`=2002 WHERE `id`=19;
+UPDATE student SET `year`=2006 WHERE `id`=18;
+UPDATE student SET `year`=1984 WHERE `id`=12;
+
+SELECT MAX(`cgpa`) AS maximun_cgpa FROM `student` WHERE 2000<=`year`<=2010;
+
+SELECT AVG(`cgpa`) AS avg_cgpa FROM `student`;
+
+SELECT COUNT(`id`) AS counter FROM `student` WHERE `cgpa`>2.20;
+
+SELECT COUNT(`id`) AS total_student FROM `student`;
+
+SELECT SUM(`cgpa`) AS total_student_cgpa FROM `student` WHERE `year`=2010;
+
+SELECT MAX(`cgpa`) AS maximun_cgpa FROM `student` WHERE `year` BETWEEN 2000 AND 2010;
+
+CREATE TABLE students(id INT AUTO_INCREMENT, name VARCHAR(20), cgpa DECIMAL(3,2), phone_numbers TEXT UNIQUE, PRIMARY KEY(id));
+
+INSERT INTO students(`name`,`cgpa`,`phone_numbers`) VALUES('sabrina',4.00,0199);
+INSERT INTO students(`name`,`phone_numbers`) VALUES('naorin',0198);
+INSERT INTO students(`name`,`phone_numbers`) VALUES('sumona',0197);
+INSERT INTO students(`name`,`cgpa`,`phone_numbers`) VALUES('minu',3.98,0195);
+SELECT `id` FROM `students` WHERE `cgpa` IS NULL;
+SELECT `id` FROM `students` WHERE `cgpa` IS NOT NULL;
